@@ -24,9 +24,9 @@ spring:
             - Path=/academy/**
           filters:
             - StripPrefix=1
-        - id: admin-service
-          uri: lb://admin-service
+        - id: user-service
+          uri: lb://user-service
           predicates:
-            - Path=/admin/**
+            - Path=/user/**
           filters:
             - StripPrefix=1
