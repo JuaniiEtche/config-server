@@ -13,3 +13,20 @@ management:
         include: "*"
     health:
       show-details: always
+
+spring:
+  cloud:
+    gateway:
+      routes:
+        - id: academy-service
+          uri: lb://academy-service
+          predicates:
+            - Path=/academy/**
+          filters:
+            - StripPrefix=1
+        - id: admin-service
+          uri: lb://admin-service
+          predicates:
+            - Path=/admin/**
+          filters:
+            - StripPrefix=1
