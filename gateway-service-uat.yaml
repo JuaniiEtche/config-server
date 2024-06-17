@@ -30,3 +30,13 @@ spring:
             - Path=/user/**
           filters:
             - StripPrefix=1
+        - id: authentication-service
+          uri: lb://authentication-service
+          predicates:
+            - Path=/auth/**
+          filters:
+            - StripPrefix=1
+
+authentication:
+  server:
+    url: http://localhost:8086
