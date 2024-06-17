@@ -1,3 +1,7 @@
 server:
   port: 8083
-academy.properties: UAT
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8084/eureka/
