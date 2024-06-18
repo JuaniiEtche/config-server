@@ -25,6 +25,8 @@ spring:
           filters:
             - StripPrefix=1
             - name: RequestAuthFilter
+              args:
+                headerName: Authorization
         - id: user-service
           uri: lb://user-service
           predicates:
@@ -32,6 +34,8 @@ spring:
           filters:
             - StripPrefix=1
             - name: RequestAuthFilter
+              args:
+                headerName: Authorization
         - id: authentication-service
           uri: lb://authentication-service
           predicates:
