@@ -36,6 +36,12 @@ spring:
             - name: RequestAuthFilter
               args:
                 headerName: Authorization
+        - id: user-public-service
+          uri: lb://user-service
+          predicates:
+            - Path=/user-public/**
+          filters:
+            - StripPrefix=1
         - id: authentication-service
           uri: lb://authentication-service
           predicates:
