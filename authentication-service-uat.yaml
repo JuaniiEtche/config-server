@@ -13,3 +13,15 @@ management:
         include: "*"
     health:
       show-details: always
+
+spring:
+  datasource:
+    url: jdbc:postgresql://149.50.140.55:5432/capnee
+    username: root
+    password: dbpassuat
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    hibernate.ddl-auto: update
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
