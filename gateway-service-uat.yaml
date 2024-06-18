@@ -24,12 +24,14 @@ spring:
             - Path=/academy/**
           filters:
             - StripPrefix=1
+            - name: RequestAuthFilter
         - id: user-service
           uri: lb://user-service
           predicates:
             - Path=/user/**
           filters:
             - StripPrefix=1
+            - name: RequestAuthFilter
         - id: authentication-service
           uri: lb://authentication-service
           predicates:
@@ -39,4 +41,4 @@ spring:
 
 authentication:
   server:
-    url: http://localhost:8086
+    url: lb://authentication-service
