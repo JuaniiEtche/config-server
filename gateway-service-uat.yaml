@@ -24,31 +24,9 @@ spring:
             - Path=/academy/**
           filters:
             - StripPrefix=1
-            - name: RequestAuthFilter
-              args:
-                headerName: Authorization
         - id: user-service
           uri: lb://user-service
           predicates:
             - Path=/user/**
           filters:
             - StripPrefix=1
-            - name: RequestAuthFilter
-              args:
-                headerName: Authorization
-        - id: user-public-service
-          uri: lb://user-service
-          predicates:
-            - Path=/user-public/**
-          filters:
-            - StripPrefix=1
-        - id: authentication-service
-          uri: lb://authentication-service
-          predicates:
-            - Path=/auth/**
-          filters:
-            - StripPrefix=1
-
-authentication:
-  server:
-    url: lb://authentication-service
