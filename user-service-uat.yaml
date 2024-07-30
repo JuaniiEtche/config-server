@@ -25,3 +25,7 @@ spring:
         properties:
             hibernate:
                 dialect: org.hibernate.dialect.PostgreSQLDialect
+
+security:
+  jwt:
+    secret-key: secret
