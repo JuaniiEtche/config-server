@@ -21,7 +21,7 @@ spring:
     password: dbpassuat
     driver-class-name: org.postgresql.Driver
   jpa:
-    hibernate.ddl-auto: update
+    hibernate.ddl-auto: create
     properties:
       hibernate.dialect: org.hibernate.dialect.PostgreSQLDialect
       hibernate.show_sql: true
