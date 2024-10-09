@@ -35,3 +35,7 @@ security:
   jwt:
     secret-key: secret
 
+micro:
+  user:
+    url: http://149.50.140.55:8081    
+
