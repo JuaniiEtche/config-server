@@ -38,7 +38,5 @@ security:
 micro:
   user:
     url: http://149.50.140.55:8081    
-micro:
-  academy:
-    url: http://localhost:8082
+
 
