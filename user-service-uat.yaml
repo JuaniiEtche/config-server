@@ -38,4 +38,4 @@ micro:
 security:
   jwt:
     secret-key: secret
-    expireAfterHours: 1
+    expireAfterHours: 8
